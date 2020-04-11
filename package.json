@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "bent": "^7.1.2",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "morgan": "^1.10.0"
   }
 }
