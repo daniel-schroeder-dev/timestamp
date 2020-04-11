@@ -32,11 +32,11 @@
   },
   "homepage": "https://github.com/daniel-schroeder-dev/timestamp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "jest": "^25.3.0",
-    "morgan": "^1.10.0",
     "supertest": "^4.0.2"
   }
 }
