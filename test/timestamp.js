@@ -1,12 +1,5 @@
-const assert = require('assert').strict;
-const bent = require('bent');
-
 const apiURL = 'http://localhost:3000/api/timestamp';
 let getJSON;
-
-beforeEach(function() {
-  getJSON = bent(apiURL, 'GET', 'json', 200);
-});
 
 describe('Timestamp api', function() {
   

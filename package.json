@@ -35,8 +35,8 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "bent": "^7.1.2",
-    "mocha": "^7.1.1",
-    "morgan": "^1.10.0"
+    "jest": "^25.3.0",
+    "morgan": "^1.10.0",
+    "supertest": "^4.0.2"
   }
 }
