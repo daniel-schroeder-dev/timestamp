@@ -13,7 +13,7 @@ app.get('/api/timestamp/', (req, res, next) => {
   const date = new Date();
   res.json({
     unix: date.getTime(),
-    utc: date.toUTCString(),
+    utc: date.toUTCString(),  
   });
 });
 
