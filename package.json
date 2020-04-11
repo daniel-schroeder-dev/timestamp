@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "npx nodemon index.js",
-    "deploy": "git push heroku master && mpg123 ~/git_sounds/trim-push-it.mp3 && git push"
+    "deploy": "git push heroku master && mpg123 ~/git_sounds/trim-push-it.mp3 && git push",
+    "test": "mocha --watch"
   },
   "engines": {
     "node": "13.x"
