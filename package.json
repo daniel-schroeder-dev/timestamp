@@ -4,8 +4,9 @@
   "description": "Timestamp Microservice which returns a Unix timestamp and UTC string given a valid ISO-8601 date string.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "npx nodemon index.js",
-    "deploy": "git push heroku master && . git-push"
+    "deploy": "git push heroku master && mpg123 ~/git_sounds/trim-push-it.mp3 && git push"
   },
   "engines": {
     "node": "13.x"
