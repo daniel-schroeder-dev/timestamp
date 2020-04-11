@@ -4,7 +4,6 @@ const bent = require('bent');
 const apiURL = 'http://localhost:3000/api/timestamp/';
 const getJSON = bent(apiURL, 'GET', 'json', 200);
 
-
 describe('Timestamp api', function() {
   
   describe('GET /api/timestamp/:valid_date_string', function() {
@@ -20,6 +19,5 @@ describe('Timestamp api', function() {
     
     });
   });
-
 
 });
