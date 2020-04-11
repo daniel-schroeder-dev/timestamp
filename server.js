@@ -5,10 +5,15 @@ const app = express();
 
 app.use(morgan('dev'));
 
-app.get('/api/timestamp/:date_string', (req, res, next) => {
-  const date = new Date(req.params.date_string);
+const parseDateString = dateString => {
+  return isNaN(+dateString) ? dateString : +dateString;
+};
+
+app.get('/api/timestamp/:dateString', (req, res, next) => {
+  const dateString = parseDateString(req.params.dateString);
+  const date = new Date(dateString);
   res.json({
-    // unix: date.getTime(),
+    unix: date.getTime(),
     utc: date.toUTCString(),
   });
 });

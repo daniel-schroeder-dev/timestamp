@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "npx nodemon index.js",
     "deploy": "git push heroku master && mpg123 ~/git_sounds/trim-push-it.mp3 && git push",
-    "test": "mocha --watch"
+    "test": "jest --watch"
   },
   "engines": {
     "node": "13.x"
