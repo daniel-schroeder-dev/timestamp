@@ -4,7 +4,7 @@
   "description": "Timestamp Microservice which returns a Unix timestamp and UTC string given a valid ISO-8601 date string.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx nodemon index.js"
   },
   "repository": {
     "type": "git",
