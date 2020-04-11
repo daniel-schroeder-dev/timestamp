@@ -1,4 +1,5 @@
 const app = require('../server');
+const assert = require('assert').strict;
 const supertest = require('supertest');
 
 const apiURL = '/api/timestamp/';
@@ -23,6 +24,25 @@ describe('timestamp api valid dateString params', function() {
       .expect(200, expected)
       .end(done);
   });
+  
+  test('should return valid JSON when passed empty date string', done => {
+    
+    const now = {
+      unix: new Date().getTime(),
+      utc: new Date().toUTCString(),      
+    };
 
+    supertest(app)
+      .get(apiURL)
+      .expect(200)
+      .end((err, res) => {
+        if (err) return done(err);
+        const unixRes = Math.floor(res.body.unix / 100);
+        const unixNow = Math.floor(now.unix / 100);
+        assert.equal(unixRes, unixNow);
+        assert.equal(now.utc, res.body.utc);
+        return done();
+      });
+  });
 
 });

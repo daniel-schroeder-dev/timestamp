@@ -9,6 +9,14 @@ const parseDateString = dateString => {
   return isNaN(+dateString) ? dateString : +dateString;
 };
 
+app.get('/api/timestamp/', (req, res, next) => {
+  const date = new Date();
+  res.json({
+    unix: date.getTime(),
+    utc: date.toUTCString(),
+  });
+});
+
 app.get('/api/timestamp/:dateString', (req, res, next) => {
   const dateString = parseDateString(req.params.dateString);
   const date = new Date(dateString);
